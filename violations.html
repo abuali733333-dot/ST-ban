@@ -24,47 +24,64 @@ body{
 .container{
     width:90%;
     margin:auto;
-    padding:40px 0;
+    padding:50px 0;
+    text-align:center;
 }
 
 .title{
-    text-align:center;
     color:#8b5cf6;
-    font-size:45px;
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    color:#aaa;
     margin-bottom:40px;
 }
 
-.card{
+.violations{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.box{
     background:#111;
-    border:1px solid #2a2a2a;
+    border:1px solid rgba(139,92,246,0.2);
     border-radius:20px;
     padding:25px;
-    margin-bottom:20px;
     transition:0.3s;
     box-shadow:0 0 15px rgba(139,92,246,0.15);
 }
 
-.card:hover{
+.box:hover{
     transform:translateY(-5px);
-    box-shadow:0 0 20px rgba(139,92,246,0.35);
+    box-shadow:0 0 25px rgba(139,92,246,0.35);
 }
 
-.card h2{
+.box h2{
     color:#8b5cf6;
-    margin-bottom:15px;
+    margin-bottom:20px;
+    font-size:28px;
 }
 
-.card p{
+.box p{
     color:#d1d1d1;
-    margin:8px 0;
+    margin:10px 0;
+    line-height:1.8;
 }
 
-.back-btn{
+.box span{
     display:block;
-    width:200px;
-    margin:40px auto;
-    text-align:center;
-    padding:14px;
+    margin-top:8px;
+    color:white;
+    font-weight:bold;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:40px;
+    padding:14px 35px;
     background:#8b5cf6;
     color:white;
     text-decoration:none;
@@ -72,14 +89,20 @@ body{
     transition:0.3s;
 }
 
-.back-btn:hover{
+.btn:hover{
     background:#7c3aed;
+    transform:scale(1.05);
 }
 
 </style>
 </head>
 
 <body>
+
+<div class="container">
+
+<h1 class="title">قائمة المخالفات</h1>
+<p class="subtitle">نظام مخالفات السيرفر</p>
 
 <div class="violations">
 
@@ -89,9 +112,10 @@ body{
 <p>تخريب سيناريو</p>
 <p>طلق عشوائي</p>
 <p>سرقة بالأمنة</p>
-<span>الأولى: 3 أيام</span><br>
-<span>الثانية: 6 أيام</span><br>
-<span>الثالثة: أسبوع</span><br>
+
+<span>الأولى: 3 أيام</span>
+<span>الثانية: 6 أيام</span>
+<span>الثالثة: أسبوع</span>
 <span>الرابعة: أسبوعين</span>
 </div>
 
@@ -101,9 +125,10 @@ body{
 <p>استعمال ثغرات</p>
 <p>تحلل أثناء سيناريو</p>
 <p>نقل أقوال بين الشخصيات</p>
-<span>الأولى: 3 أيام</span><br>
-<span>الثانية: 6 أيام</span><br>
-<span>الثالثة: أسبوع</span><br>
+
+<span>الأولى: 3 أيام</span>
+<span>الثانية: 6 أيام</span>
+<span>الثالثة: أسبوع</span>
 <span>الرابعة: أسبوعين</span>
 </div>
 
@@ -113,9 +138,10 @@ body{
 <p>مقاومة شخصين أو أكثر</p>
 <p>انتحال فايت</p>
 <p>إهانة جهة</p>
-<span>الأولى: يومين</span><br>
-<span>الثانية: 4 أيام</span><br>
-<span>الثالثة: أسبوع</span><br>
+
+<span>الأولى: يومين</span>
+<span>الثانية: 4 أيام</span>
+<span>الثالثة: أسبوع</span>
 <span>الرابعة: 10 أيام</span>
 </div>
 
@@ -124,9 +150,10 @@ body{
 <p>تهريب أشخاص لا تربطك بهم معرفة</p>
 <p>إهانة مسقط</p>
 <p>تعطيل عمل الرقابة</p>
-<span>الأولى: 3 أيام</span><br>
-<span>الثانية: 6 أيام</span><br>
-<span>الثالثة: أسبوع</span><br>
+
+<span>الأولى: 3 أيام</span>
+<span>الثانية: 6 أيام</span>
+<span>الثالثة: أسبوع</span>
 <span>الرابعة: أسبوعين</span>
 </div>
 
@@ -136,9 +163,10 @@ body{
 <p>تشويه محتوى الرول بلاي</p>
 <p>كلبشة بمناطق محصنة</p>
 <p>سرقة سيارة أو لبس حكومي</p>
-<span>الأولى: يومين</span><br>
-<span>الثانية: 3 أيام</span><br>
-<span>الثالثة: أسبوع</span><br>
+
+<span>الأولى: يومين</span>
+<span>الثانية: 3 أيام</span>
+<span>الثالثة: أسبوع</span>
 <span>الرابعة: 10 أيام</span>
 </div>
 
@@ -148,11 +176,18 @@ body{
 <p>عدم التحدث بصيغة الألم</p>
 <p>السطح وهو حامل سلاح</p>
 <p>ضرب بالأمنة</p>
-<span>الأولى: تحذير</span><br>
-<span>الثانية: باند ساعتين</span><br>
-<span>الثالثة: باند 6 ساعات</span><br>
+
+<span>الأولى: تحذير</span>
+<span>الثانية: باند ساعتين</span>
+<span>الثالثة: باند 6 ساعات</span>
 <span>الرابعة: باند يوم</span>
 </div>
+
+</div>
+
+<a href="index.html" class="btn">
+العودة للرئيسية
+</a>
 
 </div>
 
