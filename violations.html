@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>المخالفات</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma;
+}
+
+body{
+    background:#050505;
+    color:white;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:40px 0;
+}
+
+.title{
+    text-align:center;
+    color:#8b5cf6;
+    font-size:45px;
+    margin-bottom:40px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #2a2a2a;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:20px;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(139,92,246,0.15);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(139,92,246,0.35);
+}
+
+.card h2{
+    color:#8b5cf6;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#d1d1d1;
+    margin:8px 0;
+}
+
+.back-btn{
+    display:block;
+    width:200px;
+    margin:40px auto;
+    text-align:center;
+    padding:14px;
+    background:#8b5cf6;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#7c3aed;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="title">قائمة المخالفات</h1>
+
+<div class="card">
+    <h2>مخالفة #101</h2>
+    <p>السبب: السبام</p>
+    <p>العقوبة: تحذير</p>
+</div>
+
+<div class="card">
+    <h2>مخالفة #102</h2>
+    <p>السبب: الإزعاج</p>
+    <p>العقوبة: كتم ساعة</p>
+</div>
+
+<div class="card">
+    <h2>مخالفة #103</h2>
+    <p>السبب: مخالفة القوانين</p>
+    <p>العقوبة: باند يوم</p>
+</div>
+
+<a href="index.html" class="back-btn">
+العودة للرئيسية
+</a>
+
+</div>
+
+</body>
+</html>
